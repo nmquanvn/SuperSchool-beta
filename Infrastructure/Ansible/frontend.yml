@@ -1,0 +1,39 @@
+---
+- name: Network Getting Started First Playbook
+  gather_facts: false
+  hosts: all
+  become: true
+  tasks:
+    - name: Debug
+      debug:
+        msg: "{{ version }}"
+    - name: Copy pulling script
+      copy:
+        src: scripts_pulling.sh
+        dest: /opt/
+        mode: +x
+    - name: Pulling backend
+      command: sh /opt/scripts_pulling.sh hoanht140589/hcmus:backend_{{ version }}
+    - name: Pulling frontend
+      command: sh /opt/scripts_pulling.sh hoanht140589/hcmus:frontend_{{ version }}
+    #    - name: Pull Docker image
+    #      community.docker.docker_image:
+    #        name: hoanht140589/hcmus:backend_{{ version }}
+    #        source: pull
+    #    - name: Pull frontend image
+    #      community.docker.docker_image:
+    #        name: hoanht140589/hcmus:frontend_{{ version }}
+    #        source: pull
+    - name: Stop frontend
+      command: docker stop frontend
+      ignore_errors: True
+    - name: Remove frontend
+      command: docker rm frontend
+      ignore_errors: True
+    - name: Copy script backend to remote
+      copy:
+        src: scripts_frontend.sh
+        dest: /opt/
+        mode: +x
+    - name: Run script on frontend
+      command: sh /opt/scripts_frontend.sh frontend {{ version }}

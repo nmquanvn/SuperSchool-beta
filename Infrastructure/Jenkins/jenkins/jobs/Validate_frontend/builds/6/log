@@ -1,0 +1,12 @@
+Started by upstream project "[8mha:////4LMjEa0evpoTGqNRcHqwDAyIW1i5pOlASO3fUf6od9WPAAAAmx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgZ+/az8JP2k0syclPjEnBx9AILdNR7EAAAA[0mbuild_all" build number [8mha:////4OU2ms3dKj2Abm621vO0anYp/LmI3QuLFKhI7yEGwlRRAAAAnR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZB/az8JP2k0syclPjEnBx9QwMAcKroOcYAAAA=[0m10
+originally caused by:
+ Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Validate_frontend
+[Validate_frontend] $ /bin/bash /tmp/jenkins5160579100227298794.sh
+frontend_server
+frontend_server
+239b8048a94926b56ceb6917ce6288009cf2cde2394a227f50dc6440a47b8fff
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+Finished: SUCCESS

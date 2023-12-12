@@ -1,0 +1,54 @@
+Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running in Durability level: MAX_SURVIVABILITY
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+WorkflowScript: 19: Expected a step @ line 19, column 21.
+                       def remote = [:]
+                       ^
+
+WorkflowScript: 20: Expected a step @ line 20, column 21.
+                       remote.name = 'test'
+                       ^
+
+WorkflowScript: 21: Expected a step @ line 21, column 21.
+                       remote.host = $Host_IP
+                       ^
+
+WorkflowScript: 22: Expected a step @ line 22, column 21.
+                       remote.user = 'spadmin'
+                       ^
+
+WorkflowScript: 23: Expected a step @ line 23, column 21.
+                       remote.password = 'SharpEar!'
+                       ^
+
+WorkflowScript: 24: Expected a step @ line 24, column 21.
+                       remote.allowAnyHosts = true
+                       ^
+
+WorkflowScript: 18: Missing required parameter: "label" @ line 18, column 21.
+                       node {
+                       ^
+
+WorkflowScript: 25: Invalid step "stage" used - not allowed in this context - The stage step cannot be used in Declarative Pipelines @ line 25, column 23.
+                         stage('Remote SSH') {
+                         ^
+
+8 errors
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:310)
+	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1085)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:603)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:581)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:558)
+	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:298)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:268)
+	at groovy.lang.GroovyShell.parseClass(GroovyShell.java:688)
+	at groovy.lang.GroovyShell.parse(GroovyShell.java:700)
+	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.doParse(CpsGroovyShell.java:142)
+	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.reparse(CpsGroovyShell.java:127)
+	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.parseScript(CpsFlowExecution.java:571)
+	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.start(CpsFlowExecution.java:523)
+	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:337)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:429)
+Finished: FAILURE

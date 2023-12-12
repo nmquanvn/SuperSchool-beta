@@ -1,0 +1,187 @@
+Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/build_frontend
+The recommended git tool is: NONE
+using credential github
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:dtienq/SuperSchool.git # timeout=10
+Fetching upstream changes from git@github.com:dtienq/SuperSchool.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:dtienq/SuperSchool.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/feature/CI_CD^{commit} # timeout=10
+Checking out Revision a1c4d559f2ba920c112d40241ba2c67f96e93ba9 (refs/remotes/origin/feature/CI_CD)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a1c4d559f2ba920c112d40241ba2c67f96e93ba9 # timeout=10
+Commit message: "Add Frontend build"
+ > git rev-list --no-walk a1c4d559f2ba920c112d40241ba2c67f96e93ba9 # timeout=10
+[build_frontend] $ /bin/sh -xe /tmp/jenkins5860174060447206633.sh
++ ls -la
+total 44
+drwxr-xr-x  8 jenkins jenkins 4096 Mar 18 17:35 .
+drwxr-xr-x 12 jenkins jenkins 4096 Mar 18 17:35 ..
+drwxr-xr-x  8 jenkins jenkins 4096 Mar 18 18:02 .git
+-rw-r--r--  1 jenkins jenkins   74 Mar 18 17:35 .gitignore
+drwxr-xr-x  3 jenkins jenkins 4096 Mar 18 17:35 Document
+-rw-r--r--  1 jenkins jenkins 1063 Mar 18 17:35 LICENSE
+-rw-r--r--  1 jenkins jenkins 1974 Mar 18 17:35 README.md
+drwxr-xr-x 12 jenkins jenkins 4096 Mar 18 17:35 backend
+drwxr-xr-x  2 jenkins jenkins 4096 Mar 18 17:35 build-backend
+drwxr-xr-x  2 jenkins jenkins 4096 Mar 18 17:35 build-frontend
+drwxr-xr-x  4 jenkins jenkins 4096 Mar 18 17:35 frontend
++ docker build -t frontend:develop -f build-frontend/Dockerfile .
+Sending build context to Docker daemon  28.62MB
+Step 1/9 : FROM node:14-alpine
+ ---> 90f281698f7a
+Step 2/9 : MAINTAINER Hoa Nguyen aka Rico 19424023@student.hcmus.edu.vn
+ ---> Using cache
+ ---> d15a83e781b7
+Step 3/9 : WORKDIR /opt/
+ ---> Using cache
+ ---> 554b2e2122c9
+Step 4/9 : COPY ./frontend ./frontend/
+ ---> Using cache
+ ---> 7d7b73f84279
+Step 5/9 : WORKDIR /opt/frontend/
+ ---> Using cache
+ ---> cf8ca2b11367
+Step 6/9 : RUN npm install
+ ---> Running in ae35d870d945
+
+> node-sass@4.14.1 install /opt/frontend/node_modules/node-sass
+> node scripts/install.js
+
+Downloading binary from https://github.com/sass/node-sass/releases/download/v4.14.1/linux_musl-x64-83_binding.node
+Download complete
+Binary saved to /opt/frontend/node_modules/node-sass/vendor/linux_musl-x64-83/binding.node
+Caching binary to /root/.npm/node-sass/4.14.1/linux_musl-x64-83_binding.node
+
+> autonumeric@4.6.0 postinstall /opt/frontend/node_modules/autonumeric
+> node yarnfix.js
+
+
+> core-js@2.6.12 postinstall /opt/frontend/node_modules/babel-runtime/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+[96mThank you for using core-js ([94m https://github.com/zloirock/core-js [96m) for polyfilling JavaScript standard library![0m
+
+[96mThe project needs your help! Please consider supporting of core-js on Open Collective or Patreon: [0m
+[96m>[94m https://opencollective.com/core-js [0m
+[96m>[94m https://www.patreon.com/zloirock [0m
+
+[96mAlso, the author of core-js ([94m https://github.com/zloirock [96m) is looking for a good job -)[0m
+
+
+> core-js@3.8.1 postinstall /opt/frontend/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+[96mThank you for using core-js ([94m https://github.com/zloirock/core-js [96m) for polyfilling JavaScript standard library![0m
+
+[96mThe project needs your help! Please consider supporting of core-js on Open Collective or Patreon: [0m
+[96m>[94m https://opencollective.com/core-js [0m
+[96m>[94m https://www.patreon.com/zloirock [0m
+
+[96mAlso, the author of core-js ([94m https://github.com/zloirock [96m) is looking for a good job -)[0m
+
+
+> core-js-pure@3.8.1 postinstall /opt/frontend/node_modules/core-js-pure
+> node -e "try{require('./postinstall')}catch(e){}"
+
+[96mThank you for using core-js ([94m https://github.com/zloirock/core-js [96m) for polyfilling JavaScript standard library![0m
+
+[96mThe project needs your help! Please consider supporting of core-js on Open Collective or Patreon: [0m
+[96m>[94m https://opencollective.com/core-js [0m
+[96m>[94m https://www.patreon.com/zloirock [0m
+
+[96mAlso, the author of core-js ([94m https://github.com/zloirock [96m) is looking for a good job -)[0m
+
+
+> ejs@2.7.4 postinstall /opt/frontend/node_modules/ejs
+> node ./postinstall.js
+
+Thank you for installing [35mEJS[0m: built with the [32mJake[0m JavaScript build tool ([32mhttps://jakejs.com/[0m)
+
+
+> core-js@2.6.12 postinstall /opt/frontend/node_modules/react-event-listener/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+[96mThank you for using core-js ([94m https://github.com/zloirock/core-js [96m) for polyfilling JavaScript standard library![0m
+
+[96mThe project needs your help! Please consider supporting of core-js on Open Collective or Patreon: [0m
+[96m>[94m https://opencollective.com/core-js [0m
+[96m>[94m https://www.patreon.com/zloirock [0m
+
+[96mAlso, the author of core-js ([94m https://github.com/zloirock [96m) is looking for a good job -)[0m
+
+
+> jss@9.8.7 postinstall /opt/frontend/node_modules/jss
+> node -e "console.log('\u001b[35m\u001b[1mLove JSS? You can now support us on open collective:\u001b[22m\u001b[39m\n > \u001b[34mhttps://opencollective.com/jss/donate\u001b[0m')"
+
+[35m[1mLove JSS? You can now support us on open collective:[22m[39m
+ > [34mhttps://opencollective.com/jss/donate[0m
+
+> node-sass@4.14.1 postinstall /opt/frontend/node_modules/node-sass
+> node scripts/build.js
+
+Binary found at /opt/frontend/node_modules/node-sass/vendor/linux_musl-x64-83/binding.node
+Testing binary
+Binary is fine
+
+> swiper@5.3.6 postinstall /opt/frontend/node_modules/swiper
+> echo "[35m[1mLove Swiper? Support Vladimir's work by donating or pledging on patreon:[22m[39m
+ > [32mhttps://patreon.com/vladimirkharlampidi[0m
+"
+
+[35m[1mLove Swiper? Support Vladimir's work by donating or pledging on patreon:[22m[39m
+ > [32mhttps://patreon.com/vladimirkharlampidi[0m
+
+[91mnpm WARN optional[0m[91m SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/webpack-dev-server/node_modules/fsevents):
+npm WARN[0m[91m notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[0m[91mnpm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/watchpack-chokidar2/node_modules/fsevents):
+npm WARN notsup[0m[91m SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[0m[91mnpm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/node-sass-chokidar/node_modules/fsevents):
+[0m[91mnpm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[0m[91mnpm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.2.1 (node_modules/fsevents):
+npm [0m[91mWARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.2.1: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[0m[91mnpm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.3 (node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[0m[91m
+[0madded 2387 packages from 1206 contributors and audited 2398 packages in 102.413s
+
+138 packages are looking for funding
+  run `npm fund` for details
+
+found 6 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+Removing intermediate container ae35d870d945
+ ---> 8aff3b1b7bb9
+Step 7/9 : RUN npm i -g nodemon
+ ---> Running in 014a09f6b76e
+/usr/local/bin/nodemon -> /usr/local/lib/node_modules/nodemon/bin/nodemon.js
+
+> nodemon@2.0.7 postinstall /usr/local/lib/node_modules/nodemon
+> node bin/postinstall || exit 0
+
+[32mLove nodemon? You can now support the project via the open collective:[22m[39m
+ > [96m[1mhttps://opencollective.com/nodemon/donate[0m
+
+[91mnpm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.1 (node_modules/nodemon/node_modules/chokidar/node_modules/fsevents):
+[0m[91mnpm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[0m[91m
+[0m+ nodemon@2.0.7
+added 119 packages from 53 contributors in 4.986s
+Removing intermediate container 014a09f6b76e
+ ---> 84995a991b54
+Step 8/9 : EXPOSE 3001
+ ---> Running in 45805e63c4f3
+Removing intermediate container 45805e63c4f3
+ ---> 0432d8c2a9b3
+Step 9/9 : CMD ["npm","start"]
+ ---> Running in 53a9bda9ac53
+Removing intermediate container 53a9bda9ac53
+ ---> 1b76536b2bb4
+Successfully built 1b76536b2bb4
+Successfully tagged frontend:develop
+Finished: SUCCESS

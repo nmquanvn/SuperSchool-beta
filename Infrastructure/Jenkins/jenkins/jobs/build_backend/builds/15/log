@@ -1,0 +1,45 @@
+Started by upstream project "[8mha:////4LMjEa0evpoTGqNRcHqwDAyIW1i5pOlASO3fUf6od9WPAAAAmx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgZ+/az8JP2k0syclPjEnBx9AILdNR7EAAAA[0mbuild_all" build number [8mha:////4PPRWkEHqTfuyKty+weLA7MUHyJJ2Qwkrsjgra+5V6loAAAAmx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBgH9rPwk/aTSzJyU+MScHH1zAEnhHyXFAAAA[0m7
+originally caused by:
+ Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/build_backend
+The recommended git tool is: NONE
+using credential github
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:dtienq/SuperSchool.git
+ > git init /var/lib/jenkins/workspace/build_backend # timeout=10
+Fetching upstream changes from git@github.com:dtienq/SuperSchool.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:dtienq/SuperSchool.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:dtienq/SuperSchool.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/feature/CI_CD^{commit} # timeout=10
+ > git rev-parse feature/CI_CD^{commit} # timeout=10
+Checking out Revision a1c4d559f2ba920c112d40241ba2c67f96e93ba9 (refs/remotes/origin/feature/CI_CD)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a1c4d559f2ba920c112d40241ba2c67f96e93ba9 # timeout=10
+Commit message: "Add Frontend build"
+ > git rev-list --no-walk a1c4d559f2ba920c112d40241ba2c67f96e93ba9 # timeout=10
+[build_backend] $ /bin/sh -xe /tmp/jenkins7513887852672912611.sh
++ ls -la
+total 44
+drwxr-xr-x  8 jenkins jenkins 4096 Mar 19 09:00 .
+drwxr-xr-x 18 jenkins jenkins 4096 Mar 19 08:47 ..
+drwxr-xr-x  8 jenkins jenkins 4096 Mar 19 09:00 .git
+-rw-r--r--  1 jenkins jenkins   74 Mar 19 09:00 .gitignore
+drwxr-xr-x  3 jenkins jenkins 4096 Mar 19 09:00 Document
+-rw-r--r--  1 jenkins jenkins 1063 Mar 19 09:00 LICENSE
+-rw-r--r--  1 jenkins jenkins 1974 Mar 19 09:00 README.md
+drwxr-xr-x 12 jenkins jenkins 4096 Mar 19 09:00 backend
+drwxr-xr-x  2 jenkins jenkins 4096 Mar 19 09:00 build-backend
+drwxr-xr-x  2 jenkins jenkins 4096 Mar 19 09:00 build-frontend
+drwxr-xr-x  4 jenkins jenkins 4096 Mar 19 09:00 frontend
++ docker build -t hoanht140589/hcmus:backend_$Version -f build-backend/Dockerfile .
+invalid argument "hoanht140589/hcmus:backend_$Version" for "-t, --tag" flag: invalid reference format
+See 'docker build --help'.
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

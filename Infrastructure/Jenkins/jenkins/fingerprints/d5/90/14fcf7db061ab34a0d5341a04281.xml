@@ -1,0 +1,21 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2021-03-16 16:28:09.457 UTC</timestamp>
+  <md5sum>d59014fcf7db061ab34a0d5341a04281</md5sum>
+  <fileName>Credential id=github name=hoanht140589</fileName>
+  <usages>
+    <entry>
+      <string>build_frontend</string>
+      <ranges>1-9</ranges>
+    </entry>
+    <entry>
+      <string>build_backend</string>
+      <ranges>1-3,11-19</ranges>
+    </entry>
+    <entry>
+      <string>HelloWorld</string>
+      <ranges>1-2</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

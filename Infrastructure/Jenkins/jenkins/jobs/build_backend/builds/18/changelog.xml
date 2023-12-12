@@ -1,0 +1,72 @@
+commit a1c4d559f2ba920c112d40241ba2c67f96e93ba9
+tree 1871a34b2a230dd6a2d38964c80f0d10dcd1cafd
+parent 4411d02c1d0cd1cc705f3cfad9aab5ed2dc1033d
+author Hoà Nguyễn <hoanht@outlook.com> 2021-03-19 00:34:46 +0700
+committer Hoà Nguyễn <hoanht@outlook.com> 2021-03-19 00:34:46 +0700
+
+    Add Frontend build
+
+
+:100644 000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 0000000000000000000000000000000000000000 D	build-backend/Dockerfile2
+:100644 100644 1c9b53e47a4d58a98c93cbaa3263ce4d5434d40f a66ae11c970b37aca4229f5a9bb5b06ee01f69f5 R051	build-backend/Dockerfile_bk	build-frontend/Dockerfile
+:000000 100755 0000000000000000000000000000000000000000 6d53367a37026b92939a54f50b1f76f94c7c03ff A	build-frontend/docker-build.sh
+:000000 100755 0000000000000000000000000000000000000000 51c34d7a138fc54891f06afe9660b2127a52c997 A	build-frontend/docker-run.sh
+commit 4411d02c1d0cd1cc705f3cfad9aab5ed2dc1033d
+tree a62175b30173a4bed7c14719a2401680bd618079
+parent efa4c3e44f36677692aa0c6f03d88d7abc3ff3b2
+author Hoà Nguyễn <hoanht@outlook.com> 2021-03-19 00:01:01 +0700
+committer Hoà Nguyễn <hoanht@outlook.com> 2021-03-19 00:01:01 +0700
+
+    Update Dockerfile
+
+
+:100644 100644 d4791e5d97e9c06fad21352b8373fa9d9ddc576d 1047f94ad6454aa0935931e4ae3d4350bec2026d M	build-backend/Dockerfile
+commit efa4c3e44f36677692aa0c6f03d88d7abc3ff3b2
+tree 8a458af57cfdc60768d0192486284e3139a1c6aa
+parent 2fde727e188f8f9a95e285470297be8f9b5d9a06
+author Hoà Nguyễn <hoanht@outlook.com> 2021-03-18 23:54:50 +0700
+committer Hoà Nguyễn <hoanht@outlook.com> 2021-03-18 23:54:50 +0700
+
+    Update Dockerfile
+    
+    Fixing typing error
+
+
+:100644 100644 1c9b53e47a4d58a98c93cbaa3263ce4d5434d40f d4791e5d97e9c06fad21352b8373fa9d9ddc576d M	build-backend/Dockerfile
+commit 2fde727e188f8f9a95e285470297be8f9b5d9a06
+tree 067c3e0752baeddcd4b93fb8c5eaa86d17a0c570
+parent 7c850c2a7a55bc53de56fc41ea2f30a50fb2fb87
+author Hoà Nguyễn <hoanht@outlook.com> 2021-03-18 23:43:44 +0700
+committer Hoà Nguyễn <hoanht@outlook.com> 2021-03-18 23:43:44 +0700
+
+    Fixing issue with Charset
+    
+    Convert file to utf8
+
+
+:000000 100644 0000000000000000000000000000000000000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 A	build-backend/Dockerfile2
+:000000 100644 0000000000000000000000000000000000000000 1c9b53e47a4d58a98c93cbaa3263ce4d5434d40f A	build-backend/Dockerfile_bk
+commit 7c850c2a7a55bc53de56fc41ea2f30a50fb2fb87
+tree 5ca757006df8e550bd2d1afe004681a9466d88e5
+parent a2e377365171550bd16baee7619f915a8ede90e0
+author Hoà Nguyễn <hoanht@outlook.com> 2021-03-18 23:35:09 +0700
+committer Hoà Nguyễn <hoanht@outlook.com> 2021-03-18 23:35:09 +0700
+
+    Update Dockerfile
+    
+    - Fix wrong parameter
+
+
+:100644 100644 56cffc76d54cb86c0aa0d588edb9dc8ba3d07ec4 1c9b53e47a4d58a98c93cbaa3263ce4d5434d40f M	build-backend/Dockerfile
+commit a2e377365171550bd16baee7619f915a8ede90e0
+tree 522da665895d02c7a73994b3e4411d0e749adada
+parent 9a08f4f3bbedbfc979729af8022eb866df1e19d8
+author Hoà Nguyễn <hoanht@outlook.com> 2021-03-18 23:19:24 +0700
+committer Hoà Nguyễn <hoanht@outlook.com> 2021-03-18 23:19:24 +0700
+
+    CI_CD feature
+    
+    - Adding CI_CD feature
+
+
+:100644 100644 b2020bd551dac1c9e25d83e79db2198fad6e0c5e 56cffc76d54cb86c0aa0d588edb9dc8ba3d07ec4 M	build-backend/Dockerfile

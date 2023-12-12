@@ -1,0 +1,6 @@
+[filesystem "Private Build|1.8.0_282|/dev/sda1"]
+	timestampResolution = 3001 microseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "Private Build|1.8.0_282|/dev/sdb1"]
+	timestampResolution = 1001 microseconds
+	minRacyThreshold = 6090 microseconds

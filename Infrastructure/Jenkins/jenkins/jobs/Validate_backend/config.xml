@@ -1,0 +1,61 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>name</name>
+          <description></description>
+          <defaultValue>backend_server</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>Version</name>
+          <description></description>
+          <defaultValue>develop</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash
+set -e
+if [ &quot;$(docker ps -q -f name=$name)&quot; ]; then
+	#docker stop $name
+    if [ &quot;$(docker ps -aq -f &quot;status=running&quot; -f name=$name)&quot; ]; then
+    	# Stop container.
+        docker stop $name
+    fi
+    if [ &quot;$(docker ps -aq -f &quot;status=exited&quot; -f name=$name)&quot; ]; then
+        # cleanup
+        docker rm $name
+    fi
+    # run your container
+    docker run -p 43000:3000 -d --name $name hoanht140589/hcmus:backend_$Version
+else
+	docker run -p 43000:3000 -d --name $name hoanht140589/hcmus:backend_$Version
+fi
+
+sleep 10
+
+active_port=$(netstat -tulpn | grep LISTEN | grep 43000 | awk -F::: &apos;{print $2}&apos;)
+
+</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

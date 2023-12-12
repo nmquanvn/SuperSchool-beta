@@ -1,0 +1,38 @@
+Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Deploy backend to host
+[Deploy backend to host] $ sshpass ******** /usr/bin/ansible-playbook /etc/ansible/playbook.yml -i /etc/ansible/inventory/production -s -U root -f 5 -u spadmin -k -e version=develop
+usage: ansible-playbook [-h] [--version] [-v] [-k]
+                        [--private-key PRIVATE_KEY_FILE] [-u REMOTE_USER]
+                        [-c CONNECTION] [-T TIMEOUT]
+                        [--ssh-common-args SSH_COMMON_ARGS]
+                        [--sftp-extra-args SFTP_EXTRA_ARGS]
+                        [--scp-extra-args SCP_EXTRA_ARGS]
+                        [--ssh-extra-args SSH_EXTRA_ARGS] [--force-handlers]
+                        [--flush-cache] [-b] [--become-method BECOME_METHOD]
+                        [--become-user BECOME_USER] [-K] [-t TAGS]
+                        [--skip-tags SKIP_TAGS] [-C] [--syntax-check] [-D]
+                        [-i INVENTORY] [--list-hosts] [-l SUBSET]
+                        [-e EXTRA_VARS] [--vault-id VAULT_IDS]
+                        [--ask-vault-pass | --vault-password-file VAULT_PASSWORD_FILES]
+                        [-f FORKS] [-M MODULE_PATH] [--list-tasks]
+                        [--list-tags] [--step] [--start-at-task START_AT_TASK]
+                        playbook [playbook ...]
+ansible-playbook: error: unrecognized arguments: -s -U root
+FATAL: command execution failed
+hudson.AbortException: Ansible playbook execution failed
+	at org.jenkinsci.plugins.ansible.AnsiblePlaybookBuilder.perform(AnsiblePlaybookBuilder.java:262)
+	at org.jenkinsci.plugins.ansible.AnsiblePlaybookBuilder.perform(AnsiblePlaybookBuilder.java:232)
+	at jenkins.tasks.SimpleBuildStep.perform(SimpleBuildStep.java:123)
+	at hudson.tasks.BuildStepCompatibilityLayer.perform(BuildStepCompatibilityLayer.java:80)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:803)
+	at hudson.model.Build$BuildExecution.build(Build.java:197)
+	at hudson.model.Build$BuildExecution.doRun(Build.java:163)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:513)
+	at hudson.model.Run.execute(Run.java:1907)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:429)
+ERROR: Ansible playbook execution failed
+Finished: FAILURE

@@ -1,0 +1,24 @@
+{
+  "required": ["categoryId", "name", "code"],
+  "additionalProperties": true,
+  "properties": {
+    "categoryId": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "code": {
+      "type": "string",
+      "minLength": 1
+    },
+    "english": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parentId": {
+      "type": ["number", "null"]
+    }
+  }
+}

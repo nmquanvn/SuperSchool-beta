@@ -1,0 +1,15 @@
+Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Deploy frontend to host
+[Deploy frontend to host] $ /usr/bin/ansible-playbook /etc/ansible/playbook_frontend.yml -l /etc/ansible/inventory/production -f 5 --private-key /tmp/ssh2095352391785807279.key -u root -e version=develop
+[WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+[WARNING]: Could not match supplied host pattern, ignoring:
+/etc/ansible/inventory/production
+
+PLAY [Network Getting Started First Playbook] **********************************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
+Finished: SUCCESS

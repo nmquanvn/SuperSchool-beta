@@ -1,0 +1,10 @@
+Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Validate backend
+[Validate backend] $ /bin/bash /tmp/jenkins8645945239321423930.sh
+Error response from daemon: Invalid filter 'status=Up'
+Error response from daemon: Invalid filter 'status=Exited'
+docker: Error response from daemon: Conflict. The container name "/backend_server" is already in use by container "5b8d6b96cfc6b38ca1dc11f9815931b988b89d42aeb21709ac2a1d90db6b42b1". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

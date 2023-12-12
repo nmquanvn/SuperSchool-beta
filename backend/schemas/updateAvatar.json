@@ -1,0 +1,16 @@
+{
+    "required": [
+        "picture",
+        "userId"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "fullname": {
+            "picture": "string",
+            "minLength": 1
+        },
+        "userId": {
+            "type": "number"
+        }
+    }
+}

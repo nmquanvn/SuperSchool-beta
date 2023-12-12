@@ -1,0 +1,180 @@
+commit 72aa406718b0b0d9136dccdb406af803f231566d
+tree e7bf040ffb6b16a4af1f7461df01bc0c692d8a54
+parent fcbfd00306c02341fa5dfea6c25ccd3a35659c0b
+author PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 15:27:23 +0700
+committer PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 15:27:23 +0700
+
+    Fix RF token
+
+
+:100644 100644 cbccb09ff4fbe5ebe9fd73c96829397a75073809 86b8f883f8a85acb30a7515f59aba80d6c1fb5de M	backend/middlewares/validation.login.js
+:100644 100644 4d72977c402649fd2445290b211e51cbc0c97744 adf1c8333a2e7bf6fe17f7044b03431520fa22a0 M	backend/routes/auth.route.js
+:100644 100644 c288f0c7a9507098e41461ae090aa79c2baafc92 53b6479369c1114b7ad51f53a3eb960ab4a45815 M	backend/schemas/refresh-token.json
+commit fcbfd00306c02341fa5dfea6c25ccd3a35659c0b
+tree ea0bc3ed73a3a16edb61cca813e4e08fd1e9b7b7
+parent 9ad277299b9098691657aebd1c478c42770d98e3
+author PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 12:33:56 +0700
+committer PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 12:33:56 +0700
+
+    Clean code
+
+
+:100644 100644 eac7d4f1f0af75ef43accc25187e951843bd112e 8ea2de0958bccd02edc3cf4cbf0ffbeb237942a1 M	frontend/src/features/profile/components/UpdateInfo.jsx
+commit 9ad277299b9098691657aebd1c478c42770d98e3
+tree 4a546b3033c7fa3590b741e3cd8f76812416b136
+parent e31da77d22d538e0b03b356d66a00be74b71b022
+author PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 12:33:50 +0700
+committer PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 12:33:50 +0700
+
+    remove asset unused
+
+
+:100644 100644 0d66739e458c8c20fd45735fcaf7e4007d0e34a0 c316b07900fb5938d27ad9e854e897ae19722022 M	frontend/config-overrides.js
+:100644 000000 e69de29bb2d1d6434b8b29ae775ad8c2e48c5391 0000000000000000000000000000000000000000 D	frontend/src/assets/styles/globalStyles.scss
+:100644 100644 cb1e86d81eb900dfc03d81da4d6ba08db7f40e58 82d0cfd7912870cb50601b117717586425a9af7c M	frontend/src/index.js
+commit e31da77d22d538e0b03b356d66a00be74b71b022
+tree 6f068b33097e6b6bf5267e52948705ba4a745300
+parent c9b3805bc3252087e58468972e81beb29382988d
+author PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 12:28:09 +0700
+committer PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 12:28:09 +0700
+
+    Call api update info
+
+
+:100644 100644 00a5a8d596783e1ca4b1a81e834a7a41acf79576 d6a301f6fd5edcd09f888f13fa4f792cf642009f M	frontend/src/api/profileApi.js
+:100644 100644 2276f36b37c9fa0a6d366e865d405ca0e2ddb9ae eac7d4f1f0af75ef43accc25187e951843bd112e M	frontend/src/features/profile/components/UpdateInfo.jsx
+commit c9b3805bc3252087e58468972e81beb29382988d
+tree f1e8ecb9b8afe367d613ec9d4b79423986b2682b
+parent f1c7dd43fae8309dbfd24056b8404d7ebff078a2
+author PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 12:27:58 +0700
+committer PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 12:27:58 +0700
+
+    Get user info for profile page
+
+
+:100644 100644 5081e7567bf8a4895c2028f88d8b7ecec5fee729 816d839ca057828332775336f4ae55b8c700ab72 M	frontend/src/features/profile/ProfilePage.jsx
+commit f1c7dd43fae8309dbfd24056b8404d7ebff078a2
+tree 2a19f0dfd084a1299cbc8a980015e3be3f9a647e
+parent a214ddd418180c535bd68608c1e69b5e7f72e04b
+author PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 10:10:23 +0700
+committer PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 10:10:23 +0700
+
+    Clean code
+
+
+:100644 100644 52b0704c376d0f45036379dc53c91d564b4e7468 d7d9dd46dedd0b883c2dfef267de5cce2e97f882 M	frontend/src/app/userSlice.js
+commit a214ddd418180c535bd68608c1e69b5e7f72e04b
+tree a5d027678de43c50c1559993c2a5e3e194bc34fd
+parent 91bce98248e6aaa1bf82b66e1b355df8d7db247d
+author PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 03:59:40 +0700
+committer PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 03:59:40 +0700
+
+    Fix Link url is error
+
+
+:100644 100644 e53fe7dbcb572e7ad6841f96a8da9460bd0eb0ee adfdad06ce0ec2c400eb8e757de8c78ac64ab0b0 M	frontend/src/features/courses/components/EnrollCoursesItem.jsx
+commit 91bce98248e6aaa1bf82b66e1b355df8d7db247d
+tree 50569b2c480fc880d708dcef26305c5a337517c4
+parent 9696f3f9a6aa3f420c0a2489cc48d4d7951aa79e
+author PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 03:43:53 +0700
+committer PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 03:43:53 +0700
+
+    Fix api get detail course
+
+
+:100644 100644 cb490b7263570f5f362b4625a6c8f8621401fe94 82d71932e85846ab9e1ad5b4b590fa4002d94101 M	backend/routes/course.route.js
+commit 9696f3f9a6aa3f420c0a2489cc48d4d7951aa79e
+tree 3ab9c4e820f5c5bac4004d783b3db02925ea2bdb
+parent b7d685e5ea9299119f7152c9bdb092298c08495e
+author PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 03:42:01 +0700
+committer PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 03:42:01 +0700
+
+    Fix Link tag is not needed
+
+
+:100644 100644 d34aaf4dcd95948591c785366af8125226e13467 5f560f1f16bd37712d3fc2fb8a057468af9d51de M	frontend/src/components/CoursesItem.jsx
+commit b7d685e5ea9299119f7152c9bdb092298c08495e
+tree 2c9fa54cfc002672312b4aae053174a81cccbf9d
+parent f172eea4e912ce4491506aa0ac8f3a1986049bca
+author PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 03:28:59 +0700
+committer PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 03:28:59 +0700
+
+    Fix key is missing
+
+
+:100644 100644 87c2818010476a6dfbc274152e6f2fe9b07fd9ba 795820e75d4612569826b4b0d76ff456a6e756e6 M	frontend/src/components/BestViewCategory.jsx
+:100644 100644 c37f9b3e6136b376dd0a262b58cab975592a1eca d34aaf4dcd95948591c785366af8125226e13467 M	frontend/src/components/CoursesItem.jsx
+:100644 100644 a8994dcdff372274cc9689ffb589796f70d6fe93 e53fe7dbcb572e7ad6841f96a8da9460bd0eb0ee M	frontend/src/features/courses/components/EnrollCoursesItem.jsx
+:100644 100644 5963839e793fc943c6ac21f69e2fc8cbdf18640b 94a49651981cdc7a93defa9394e3c0434675645a M	frontend/src/features/courses/components/LikeCoursesItem.jsx
+commit f172eea4e912ce4491506aa0ac8f3a1986049bca
+tree 258301b5025c17b370eb49d33ac52927e9b5ab9e
+parent dd79a02ebe93af4612bd4e95e3f8533cc3c8c593
+author PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 03:10:11 +0700
+committer PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 03:10:11 +0700
+
+    Fix key is missing
+
+
+:100644 100644 364ebfe1e48415cd479900fde3d3420f4b0e31ad c23ed2adba40473a3e691128648010612e88d95d M	frontend/src/features/courses/components/CoursesDetail.jsx
+commit dd79a02ebe93af4612bd4e95e3f8533cc3c8c593
+tree 1fd96a3816dccd1c45a58aebf6c1aabfbc57a851
+parent e6f953d92d56d7dbd712ecbc88d8085574edcbc9
+author PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 03:09:21 +0700
+committer PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 03:09:21 +0700
+
+    Fix axios interceptor refreshtoken
+
+
+:100644 100644 d94c96ed7e8c515da320f00b97eedb2331440362 43de69922a85acef7cfd21b6490e5a07d4a9915d M	frontend/src/api/axiosClient.js
+commit e6f953d92d56d7dbd712ecbc88d8085574edcbc9
+tree bca7fa6b4f05427dbb2f019d145c68ccd47a9f46
+parent dfa0fa139c806066ef15096594378ae11e2248d4
+author PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 03:06:50 +0700
+committer PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 03:06:50 +0700
+
+    Fix Link tag not suitable
+
+
+:100644 100644 47a410d1a82c7239cb91c30077319e94da81834b 805b84be862f1d84779ff0bad844e375c969ff02 M	frontend/src/components/NavOne.jsx
+commit dfa0fa139c806066ef15096594378ae11e2248d4
+tree 0c972e2f764df88896bfa50752403fc9e2c50bd2
+parent d7e6461b65881be764a486fd266f254d3b059231
+author PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 00:06:48 +0700
+committer PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-23 00:06:48 +0700
+
+    Setup Skeleton size
+
+
+:100644 100644 f309aaf52a8a36ba02c4642a89e182aa037689dd 87c2818010476a6dfbc274152e6f2fe9b07fd9ba M	frontend/src/components/BestViewCategory.jsx
+:100644 100644 0b219cd26751a4204da7489654dd06778b733567 4c967d0c8788d85d142845dfcba3e7bffe648fe8 M	frontend/src/components/CoursesCarousel.jsx
+commit d7e6461b65881be764a486fd266f254d3b059231
+tree be5f89050d0803be5cceb45e1ef49283a4e1362d
+parent 1dcce48b8fbe9281dd7eceaf494a285e65af6a2b
+author PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-22 23:57:42 +0700
+committer PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-22 23:57:42 +0700
+
+    Remove unused footer icon
+
+
+:100644 100644 38801b1a42f9b8ae3f999f245c3b2ddee419beb4 8b77121b42619f7630f1a8fbf7a190c3ee60e3ca M	frontend/src/components/Footer.jsx
+commit eb1f48870f42bb3c94aa33262e96ca08f1aad8cd
+tree 753c9d6131cc2a2c976831b64d693964c4bba49b
+parent 52c5f437b00a6352d3ff36bdde7074c310441771
+author 1660612 <1660612@student.hcmus.edu.vn> 2021-03-22 23:32:55 +0700
+committer 1660612 <1660612@student.hcmus.edu.vn> 2021-03-22 23:32:55 +0700
+
+    Fix full text search
+
+
+:100644 100644 ef56283a41c348630011ebb0d355433052c1b249 243608490c0902bd6a356ca036d6e3499e678f2d M	backend/models/course.model.js
+commit 23f1b5238cd8fab509e20bf0b796bc44f84d70fc
+tree 29f34516eed5b8d5b199582afbb7c870ef79b188
+parent 5a439b5a9c6169c47d5c5ef2264b7af5212db9ca
+author PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-22 22:21:30 +0700
+committer PhanThanh07 <phanthanhvi97@gmail.com> 2021-03-22 22:21:30 +0700
+
+    config env
+
+
+:100644 100644 0bf42616eadba8dee229fc6a5bd69052b0e66e67 347a23e87bc08eee56728d5256acb54e55a5dff2 M	frontend/.env
+:100644 100644 aa5097747a2cc3533a64fc81a4b899727f5d1b0a d94c96ed7e8c515da320f00b97eedb2331440362 M	frontend/src/api/axiosClient.js

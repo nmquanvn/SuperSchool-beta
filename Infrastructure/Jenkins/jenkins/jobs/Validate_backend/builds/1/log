@@ -1,0 +1,10 @@
+Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Validate backend
+[Validate backend] $ /bin/sh -xe /tmp/jenkins4753774951462564174.sh
++ docker ps -q -f name=backend_server
++ [ !  ]
++ docker stop backend_server
+Error response from daemon: No such container: backend_server
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

@@ -1,0 +1,70 @@
+Started by upstream project "[8mha:////4IjntpCbk6Hy0W74V1pXjrpwfD9dhR0ppMslTies5McrAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JP2k0syclPikxOTs1LwUfQDZl1vfyAAAAA==[0mbuild_backend" build number [8mha:////4P5QSXHsNfCzfO+ufzsIdT2hlyEJhglC759NT+SOGG7lAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBhH9rPwk/aTSzJyU+KTE5OzUvBR9EwBmDoreyQAAAA==[0m4
+originally caused by:
+ Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/backend
+The recommended git tool is: NONE
+using credential github
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:dtienq/SuperSchool.git
+ > git init /var/lib/jenkins/workspace/backend # timeout=10
+Fetching upstream changes from git@github.com:dtienq/SuperSchool.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:dtienq/SuperSchool.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:dtienq/SuperSchool.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/feature/CI_CD^{commit} # timeout=10
+ > git rev-parse feature/CI_CD^{commit} # timeout=10
+Checking out Revision 4411d02c1d0cd1cc705f3cfad9aab5ed2dc1033d (refs/remotes/origin/feature/CI_CD)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4411d02c1d0cd1cc705f3cfad9aab5ed2dc1033d # timeout=10
+Commit message: "Update Dockerfile"
+ > git rev-list --no-walk efa4c3e44f36677692aa0c6f03d88d7abc3ff3b2 # timeout=10
+[backend] $ /bin/sh -xe /tmp/jenkins478762385529492735.sh
++ ls -la
+total 40
+drwxr-xr-x  7 jenkins jenkins 4096 Mar 18 17:19 .
+drwxr-xr-x  8 jenkins jenkins 4096 Mar 18 17:12 ..
+drwxr-xr-x  8 jenkins jenkins 4096 Mar 18 17:19 .git
+-rw-r--r--  1 jenkins jenkins   74 Mar 18 17:19 .gitignore
+drwxr-xr-x  3 jenkins jenkins 4096 Mar 18 17:19 Document
+-rw-r--r--  1 jenkins jenkins 1063 Mar 18 17:19 LICENSE
+-rw-r--r--  1 jenkins jenkins 1974 Mar 18 17:19 README.md
+drwxr-xr-x 12 jenkins jenkins 4096 Mar 18 17:19 backend
+drwxr-xr-x  2 jenkins jenkins 4096 Mar 18 17:19 build-backend
+drwxr-xr-x  4 jenkins jenkins 4096 Mar 18 17:19 frontend
++ docker build -t backend:release -f build-backend/Dockerfile .
+Sending build context to Docker daemon  28.56MB
+Step 1/9 : FROM node:14-alpine
+ ---> 90f281698f7a
+Step 2/9 : MAINTAINER Hoa Nguyen aka Rico 19424023@student.hcmus.edu.vn
+ ---> Using cache
+ ---> c62b3e8cb0ae
+Step 3/9 : WORKDIR /opt/
+ ---> Using cache
+ ---> 564bb4b194a1
+Step 4/9 : COPY ./backend ./backend/
+ ---> Using cache
+ ---> 07ab82c7aa60
+Step 5/9 : WORKDIR /opt/backend/
+ ---> Using cache
+ ---> 6354514dd31c
+Step 6/9 : RUN npm install
+ ---> Using cache
+ ---> d328ce6165c5
+Step 7/9 : RUN npm i -g nodemon
+ ---> Using cache
+ ---> 626a2c872c74
+Step 8/9 : EXPOSE 3000
+ ---> Using cache
+ ---> 6ffa58790f87
+Step 9/9 : CMD ["npm","start"]
+ ---> Using cache
+ ---> 0d71520fbe4f
+Successfully built 0d71520fbe4f
+Successfully tagged backend:release
+Finished: SUCCESS

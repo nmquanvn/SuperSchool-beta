@@ -1,0 +1,37 @@
+{
+    "required": [
+        "title",
+        "price",
+        "categoryId",
+        "teacherId",
+        "videos"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "title": {
+            "type": "string",
+            "minLength": 1
+        },
+        "price": {
+            "type": "number"
+        },
+        "categoryId": {
+            "type": "number"
+        },
+        "teacherId": {
+            "type": "number"
+        },
+        "image": {
+            "type": "object"
+        },
+        "description": {
+            "type": "string"
+        },
+        "detailDescription": {
+            "type": "string"
+        },
+        "videos": {
+            "type": "array"
+        }
+    }
+}

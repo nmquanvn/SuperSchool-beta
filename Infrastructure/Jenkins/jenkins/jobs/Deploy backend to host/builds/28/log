@@ -1,0 +1,39 @@
+Started by upstream project "[8mha:////4N4RAre5enw2FCUtSlcshJxPnBmIY/L5nsxN1dVRoWu6AAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgYB/az8JH2X1IKc/Mr4xJwcfQAcojipxQAAAA==[0mDeploy_all" build number [8mha:////4I2zIF7S4Hu0Yn2vXI4rdqQrNqEmFB/4DDAYOWj1wdWVAAAAnR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAwmoBn6WflJ+i6pBTn5lfGJOTn6huYAEqZhLMcAAAA=[0m17
+originally caused by:
+ Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Deploy backend to host
+[Deploy backend to host] $ /usr/bin/ansible-playbook /etc/ansible/playbook.yml -i /etc/ansible/inventory/production -f 5 --private-key /tmp/ssh1838377730469664624.key -u root -e version=develop
+
+PLAY [Network Getting Started First Playbook] **********************************
+
+TASK [Debug] *******************************************************************
+ok: [production] => {
+    "msg": "develop"
+}
+
+TASK [Copy pulling script] *****************************************************
+ok: [production]
+
+TASK [Pulling backend] *********************************************************
+changed: [production]
+
+TASK [Pulling frontend] ********************************************************
+changed: [production]
+
+TASK [Stop backend] ************************************************************
+changed: [production]
+
+TASK [Remove backend] **********************************************************
+changed: [production]
+
+TASK [Copy script backend to remote] *******************************************
+ok: [production]
+
+TASK [Run script on backend] ***************************************************
+changed: [production]
+
+PLAY RECAP *********************************************************************
+production                 : ok=8    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+Finished: SUCCESS

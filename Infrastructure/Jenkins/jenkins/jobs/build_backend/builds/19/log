@@ -1,0 +1,115 @@
+Started by upstream project "[8mha:////4LMjEa0evpoTGqNRcHqwDAyIW1i5pOlASO3fUf6od9WPAAAAmx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgZ+/az8JP2k0syclPjEnBx9AILdNR7EAAAA[0mbuild_all" build number [8mha:////4JXkQdsHsmXj3ELMTwP0usoIl+iXDyKCRuV0ENH9Hm96AAAAnR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZB/az8JP2k0syclPjEnBx9Q0MA5prvTsYAAAA=[0m11
+originally caused by:
+ Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/build_backend
+The recommended git tool is: NONE
+using credential github
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:dtienq/SuperSchool.git
+ > git init /var/lib/jenkins/workspace/build_backend # timeout=10
+Fetching upstream changes from git@github.com:dtienq/SuperSchool.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:dtienq/SuperSchool.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:dtienq/SuperSchool.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse origin/main^{commit} # timeout=10
+Checking out Revision 516ddf365797aba385fbe67437f0efdb951e21a3 (origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 516ddf365797aba385fbe67437f0efdb951e21a3 # timeout=10
+Commit message: "Merge branch 'complete-project' into main"
+ > git rev-list --no-walk 5a439b5a9c6169c47d5c5ef2264b7af5212db9ca # timeout=10
+[build_backend] $ /bin/sh -xe /tmp/jenkins6083722980800238326.sh
++ ls -la
+total 44
+drwxr-xr-x  8 jenkins jenkins 4096 Mar 23 13:04 .
+drwxr-xr-x 20 jenkins jenkins 4096 Mar 19 09:04 ..
+drwxr-xr-x  8 jenkins jenkins 4096 Mar 23 13:04 .git
+-rw-r--r--  1 jenkins jenkins   74 Mar 23 13:04 .gitignore
+drwxr-xr-x  3 jenkins jenkins 4096 Mar 23 13:04 Document
+-rw-r--r--  1 jenkins jenkins 1063 Mar 23 13:04 LICENSE
+-rw-r--r--  1 jenkins jenkins 1974 Mar 23 13:04 README.md
+drwxr-xr-x 11 jenkins jenkins 4096 Mar 23 13:04 backend
+drwxr-xr-x  2 jenkins jenkins 4096 Mar 23 13:04 build-backend
+drwxr-xr-x  2 jenkins jenkins 4096 Mar 23 13:04 build-frontend
+drwxr-xr-x  4 jenkins jenkins 4096 Mar 23 13:04 frontend
++ docker build -t hoanht140589/hcmus:backend_develop -f build-backend/Dockerfile .
+Sending build context to Docker daemon  28.91MB
+Step 1/9 : FROM node:14-alpine
+ ---> 90f281698f7a
+Step 2/9 : MAINTAINER Hoa Nguyen aka Rico 19424023@student.hcmus.edu.vn
+ ---> Using cache
+ ---> 912a47c8be2c
+Step 3/9 : WORKDIR /opt/
+ ---> Using cache
+ ---> bdb8728e619f
+Step 4/9 : COPY ./backend ./backend/
+ ---> 0c243e85216f
+Step 5/9 : WORKDIR /opt/backend/
+ ---> Running in 6eb518377f21
+Removing intermediate container 6eb518377f21
+ ---> 99e9d5bc07d7
+Step 6/9 : RUN npm install
+ ---> Running in 9091dcff6d66
+
+> bcrypt@5.0.0 install /opt/backend/node_modules/bcrypt
+> node-pre-gyp install --fallback-to-build
+
+[91mnode-pre-gyp[0m[91m [0m[91mWARN[0m[91m [0m[91mUsing needle for node-pre-gyp https download[0m[91m 
+[0m[bcrypt] Success: "/opt/backend/node_modules/bcrypt/lib/binding/napi-v3/bcrypt_lib.node" is installed via remote
+
+> core-js@2.6.12 postinstall /opt/backend/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+
+[96mThank you for using core-js ([94m https://github.com/zloirock/core-js [96m) for polyfilling JavaScript standard library![0m
+
+[96mThe project needs your help! Please consider supporting of core-js on Open Collective or Patreon: [0m
+[96m>[94m https://opencollective.com/core-js [0m
+[96m>[94m https://www.patreon.com/zloirock [0m
+
+[96mAlso, the author of core-js ([94m https://github.com/zloirock [96m) is looking for a good job -)[0m
+
+[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91moptional[0m[91m SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.13 (node_modules/fsevents):
+[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mnotsup[0m[91m SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[0m[91m
+[0madded 517 packages from 405 contributors and audited 523 packages in 20.896s
+
+7 packages are looking for funding
+  run `npm fund` for details
+
+found 5 vulnerabilities (4 low, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+Removing intermediate container 9091dcff6d66
+ ---> 97884c517425
+Step 7/9 : RUN npm i -g nodemon
+ ---> Running in f30d2960863a
+/usr/local/bin/nodemon -> /usr/local/lib/node_modules/nodemon/bin/nodemon.js
+
+> nodemon@2.0.7 postinstall /usr/local/lib/node_modules/nodemon
+> node bin/postinstall || exit 0
+
+[32mLove nodemon? You can now support the project via the open collective:[22m[39m
+ > [96m[1mhttps://opencollective.com/nodemon/donate[0m
+
+[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91moptional[0m[91m SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.1 (node_modules/nodemon/node_modules/chokidar/node_modules/fsevents):
+[0m[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mnotsup[0m[91m SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[0m[91m
+[0m+ nodemon@2.0.7
+added 119 packages from 53 contributors in 6.286s
+Removing intermediate container f30d2960863a
+ ---> abf584b91876
+Step 8/9 : EXPOSE 3000
+ ---> Running in 6b51c75c5356
+Removing intermediate container 6b51c75c5356
+ ---> 51fe7db39fdd
+Step 9/9 : CMD ["npm","start"]
+ ---> Running in b96dd51907d3
+Removing intermediate container b96dd51907d3
+ ---> 8288f4fc8223
+Successfully built 8288f4fc8223
+Successfully tagged hoanht140589/hcmus:backend_develop
+Finished: SUCCESS

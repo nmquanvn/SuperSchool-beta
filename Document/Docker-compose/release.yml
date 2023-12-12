@@ -1,0 +1,17 @@
+backend_server:
+  image: hoanht140589/hcmus:backend_develop
+  container_name: backend
+  ports:
+    - 3000:3000
+  environment:
+    - TZ=Asia/Ho_Chi_Minh
+
+frontend_server:
+  image: hoanht140589/hcmus:frontend_develop
+  container_name: frontend
+  ports:
+    - 3001:3001
+  environment:
+    - TZ=Asia/Ho_Chi_Minh
+  links:
+    - backend_server:backend

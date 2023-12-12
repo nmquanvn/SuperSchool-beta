@@ -1,0 +1,66 @@
+Started by upstream project "[8mha:////4LMjEa0evpoTGqNRcHqwDAyIW1i5pOlASO3fUf6od9WPAAAAmx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgZ+/az8JP2k0syclPjEnBx9AILdNR7EAAAA[0mbuild_all" build number [8mha:////4NiOCEZNAyBeJYZnIMI1ZEFnRrp284YOSq8lYjSP17sYAAAAmx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBgH9rPwk/aTSzJyU+MScHH0LANj8oLXFAAAA[0m8
+originally caused by:
+ Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/build_frontend
+The recommended git tool is: NONE
+using credential github
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:dtienq/SuperSchool.git # timeout=10
+Fetching upstream changes from git@github.com:dtienq/SuperSchool.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:dtienq/SuperSchool.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/feature/CI_CD^{commit} # timeout=10
+Checking out Revision a1c4d559f2ba920c112d40241ba2c67f96e93ba9 (refs/remotes/origin/feature/CI_CD)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a1c4d559f2ba920c112d40241ba2c67f96e93ba9 # timeout=10
+Commit message: "Add Frontend build"
+ > git rev-list --no-walk a1c4d559f2ba920c112d40241ba2c67f96e93ba9 # timeout=10
+[build_frontend] $ /bin/sh -xe /tmp/jenkins4145556019889988887.sh
++ ls -la
+total 44
+drwxr-xr-x  8 jenkins jenkins 4096 Mar 18 17:35 .
+drwxr-xr-x 19 jenkins jenkins 4096 Mar 19 09:03 ..
+drwxr-xr-x  8 jenkins jenkins 4096 Mar 19 09:03 .git
+-rw-r--r--  1 jenkins jenkins   74 Mar 18 17:35 .gitignore
+drwxr-xr-x  3 jenkins jenkins 4096 Mar 18 17:35 Document
+-rw-r--r--  1 jenkins jenkins 1063 Mar 18 17:35 LICENSE
+-rw-r--r--  1 jenkins jenkins 1974 Mar 18 17:35 README.md
+drwxr-xr-x 12 jenkins jenkins 4096 Mar 18 17:35 backend
+drwxr-xr-x  2 jenkins jenkins 4096 Mar 18 17:35 build-backend
+drwxr-xr-x  2 jenkins jenkins 4096 Mar 18 17:35 build-frontend
+drwxr-xr-x  4 jenkins jenkins 4096 Mar 18 17:35 frontend
++ docker build -t hoanht140589/hcmus:frontend_develop -f build-frontend/Dockerfile .
+Sending build context to Docker daemon  28.72MB
+Step 1/9 : FROM node:14-alpine
+ ---> 90f281698f7a
+Step 2/9 : MAINTAINER Hoa Nguyen aka Rico 19424023@student.hcmus.edu.vn
+ ---> Using cache
+ ---> 912a47c8be2c
+Step 3/9 : WORKDIR /opt/
+ ---> Using cache
+ ---> bdb8728e619f
+Step 4/9 : COPY ./frontend ./frontend/
+ ---> Using cache
+ ---> bab80c431042
+Step 5/9 : WORKDIR /opt/frontend/
+ ---> Using cache
+ ---> c462dc456560
+Step 6/9 : RUN npm install
+ ---> Using cache
+ ---> 4b6e95d6276f
+Step 7/9 : RUN npm i -g nodemon
+ ---> Using cache
+ ---> 5fae9213f688
+Step 8/9 : EXPOSE 3001
+ ---> Using cache
+ ---> 01152f088292
+Step 9/9 : CMD ["npm","start"]
+ ---> Using cache
+ ---> 42d36a52e7ae
+Successfully built 42d36a52e7ae
+Successfully tagged hoanht140589/hcmus:frontend_develop
+Finished: SUCCESS

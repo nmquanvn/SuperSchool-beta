@@ -1,0 +1,8 @@
+Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Deploy backend to host
+[Deploy backend to host] $ /bin/sh -xe /tmp/jenkins1209169384421127131.sh
++ ansible-playbook playbook.yml -i inventory/production -e version=develop
+ERROR! the playbook: playbook.yml could not be found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

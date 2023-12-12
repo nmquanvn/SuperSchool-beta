@@ -1,0 +1,40 @@
+Started by upstream project "[8mha:////4N4RAre5enw2FCUtSlcshJxPnBmIY/L5nsxN1dVRoWu6AAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgYB/az8JH2X1IKc/Mr4xJwcfQAcojipxQAAAA==[0mDeploy_all" build number [8mha:////4J1SL35PYXmxUKx8YLkmyI1CyNlCg2IS3hhqoPuvY4q/AAAAnR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAwmoBn6WflJ+i6pBTn5lfGJOTn6hqYAPsdvwscAAAA=[0m15
+originally caused by:
+ Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Deploy backend to host
+[Deploy backend to host] $ /usr/bin/ansible-playbook /etc/ansible/playbook.yml -i /etc/ansible/inventory/production -f 5 --private-key /tmp/ssh8269347390313484825.key -u root -e version=$version
+
+PLAY [Network Getting Started First Playbook] **********************************
+
+TASK [Debug] *******************************************************************
+ok: [production] => {
+    "msg": "$version"
+}
+
+TASK [Copy pulling script] *****************************************************
+ok: [production]
+
+TASK [Pulling backend] *********************************************************
+fatal: [production]: FAILED! => {"changed": true, "cmd": ["sh", "/opt/scripts_pulling.sh", "hoanht140589/hcmus:backend_$version"], "delta": "0:00:00.051521", "end": "2021-03-19 08:54:19.773364", "msg": "non-zero return code", "rc": 1, "start": "2021-03-19 08:54:19.721843", "stderr": "invalid reference format", "stderr_lines": ["invalid reference format"], "stdout": "", "stdout_lines": []}
+
+PLAY RECAP *********************************************************************
+production                 : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+FATAL: command execution failed
+hudson.AbortException: Ansible playbook execution failed
+	at org.jenkinsci.plugins.ansible.AnsiblePlaybookBuilder.perform(AnsiblePlaybookBuilder.java:262)
+	at org.jenkinsci.plugins.ansible.AnsiblePlaybookBuilder.perform(AnsiblePlaybookBuilder.java:232)
+	at jenkins.tasks.SimpleBuildStep.perform(SimpleBuildStep.java:123)
+	at hudson.tasks.BuildStepCompatibilityLayer.perform(BuildStepCompatibilityLayer.java:80)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:803)
+	at hudson.model.Build$BuildExecution.build(Build.java:197)
+	at hudson.model.Build$BuildExecution.doRun(Build.java:163)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:513)
+	at hudson.model.Run.execute(Run.java:1907)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:429)
+ERROR: Ansible playbook execution failed
+Finished: FAILURE

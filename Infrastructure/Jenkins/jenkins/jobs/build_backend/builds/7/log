@@ -1,0 +1,89 @@
+Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/backend
+The recommended git tool is: NONE
+using credential github
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository git@github.com:dtienq/SuperSchool.git
+ > git init /var/lib/jenkins/workspace/backend # timeout=10
+Fetching upstream changes from git@github.com:dtienq/SuperSchool.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:dtienq/SuperSchool.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:dtienq/SuperSchool.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/feature/CI_CD^{commit} # timeout=10
+ > git rev-parse feature/CI_CD^{commit} # timeout=10
+Checking out Revision efa4c3e44f36677692aa0c6f03d88d7abc3ff3b2 (refs/remotes/origin/feature/CI_CD)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f efa4c3e44f36677692aa0c6f03d88d7abc3ff3b2 # timeout=10
+Commit message: "Update Dockerfile"
+ > git rev-list --no-walk 2fde727e188f8f9a95e285470297be8f9b5d9a06 # timeout=10
+[backend] $ /bin/sh -xe /tmp/jenkins6243224382687744293.sh
++ ls -la
+total 40
+drwxr-xr-x  7 jenkins jenkins 4096 Mar 18 16:58 .
+drwxr-xr-x  6 jenkins jenkins 4096 Mar 18 16:11 ..
+drwxr-xr-x  8 jenkins jenkins 4096 Mar 18 16:58 .git
+-rw-r--r--  1 jenkins jenkins   74 Mar 18 16:58 .gitignore
+drwxr-xr-x  3 jenkins jenkins 4096 Mar 18 16:58 Document
+-rw-r--r--  1 jenkins jenkins 1063 Mar 18 16:58 LICENSE
+-rw-r--r--  1 jenkins jenkins 1974 Mar 18 16:58 README.md
+drwxr-xr-x 12 jenkins jenkins 4096 Mar 18 16:58 backend
+drwxr-xr-x  2 jenkins jenkins 4096 Mar 18 16:58 build-backend
+drwxr-xr-x  4 jenkins jenkins 4096 Mar 18 16:58 frontend
++ docker build -t backend:develop -f build-backend/Dockerfile .
+Sending build context to Docker daemon  28.55MB
+Step 1/9 : FROM node:14-alpine
+ ---> 90f281698f7a
+Step 2/9 : MAINTAINER Hoa Nguyen aka Rico 19424023@student.hcmus.edu.vn
+ ---> Using cache
+ ---> c62b3e8cb0ae
+Step 3/9 : WORKDIR /opt/
+ ---> Using cache
+ ---> 564bb4b194a1
+Step 4/9 : COPY ./backend ./backend/
+ ---> Using cache
+ ---> 07ab82c7aa60
+Step 5/9 : WORKDIR /opt/backend/
+ ---> Using cache
+ ---> 6354514dd31c
+Step 6/9 : RUN npm install
+ ---> Using cache
+ ---> d328ce6165c5
+Step 7/9 : RUN npm -i -g nodemon
+ ---> Running in a90063dd289b
+
+Usage: npm <command>
+
+where <command> is one of:
+    access, adduser, audit, bin, bugs, c, cache, ci, cit,
+    clean-install, clean-install-test, completion, config,
+    create, ddp, dedupe, deprecate, dist-tag, docs, doctor,
+    edit, explore, fund, get, help, help-search, hook, i, init,
+    install, install-ci-test, install-test, it, link, list, ln,
+    login, logout, ls, org, outdated, owner, pack, ping, prefix,
+    profile, prune, publish, rb, rebuild, repo, restart, root,
+    run, run-script, s, se, search, set, shrinkwrap, star,
+    stars, start, stop, t, team, test, token, tst, un,
+    uninstall, unpublish, unstar, up, update, v, version, view,
+    whoami
+
+npm <command> -h  quick help on <command>
+npm -l            display full usage info
+npm help <term>   search for help on <term>
+npm help npm      involved overview
+
+Specify configs in the ini-formatted file:
+    /root/.npmrc
+or on the command line via: npm <command> --key value
+Config info can be viewed via: npm help config
+
+npm@6.14.11 /usr/local/lib/node_modules/npm
+
+The command '/bin/sh -c npm -i -g nodemon' returned a non-zero code: 1
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

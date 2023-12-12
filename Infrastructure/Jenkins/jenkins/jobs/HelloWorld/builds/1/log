@@ -1,0 +1,35 @@
+Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/HelloWorld
+The recommended git tool is: NONE
+using credential github
+Cloning the remote Git repository
+Cloning repository git@github.com:dtienq/SuperSchool.git
+ > git init /var/lib/jenkins/workspace/HelloWorld # timeout=10
+Fetching upstream changes from git@github.com:dtienq/SuperSchool.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.17.1'
+using GIT_SSH to set credentials 
+ > git fetch --tags --progress -- git@github.com:dtienq/SuperSchool.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:dtienq/SuperSchool.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 4471f514f5232f026d9251e0ee14675eb55320ea (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4471f514f5232f026d9251e0ee14675eb55320ea # timeout=10
+Commit message: "Merge pull request #19 from dtienq/tienqd"
+First time build. Skipping changelog.
+[HelloWorld] $ /bin/sh -xe /tmp/jenkins6066603002792063919.sh
++ ls -la
+total 36
+drwxr-xr-x  6 jenkins jenkins 4096 Mar 16 16:28 .
+drwxr-xr-x  4 jenkins jenkins 4096 Mar 16 16:28 ..
+drwxr-xr-x  8 jenkins jenkins 4096 Mar 16 16:28 .git
+-rw-r--r--  1 jenkins jenkins   74 Mar 16 16:28 .gitignore
+drwxr-xr-x  3 jenkins jenkins 4096 Mar 16 16:28 Document
+-rw-r--r--  1 jenkins jenkins 1063 Mar 16 16:28 LICENSE
+-rw-r--r--  1 jenkins jenkins 1974 Mar 16 16:28 README.md
+drwxr-xr-x 12 jenkins jenkins 4096 Mar 16 16:28 backend
+drwxr-xr-x  4 jenkins jenkins 4096 Mar 16 16:28 frontend
+Finished: SUCCESS

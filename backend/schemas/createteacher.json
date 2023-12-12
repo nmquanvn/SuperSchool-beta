@@ -1,0 +1,21 @@
+{
+    "required": [
+        "fullname",
+        "email"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "fullname": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        },
+        "picture": {
+            "type": "string"
+        },
+        "usergroupid": {
+            "type": "number"
+        }
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <input type="file" id="fileUpload">
+
+    <button id="btnUpload">Upload</button>
+
+    <script>
+        let fileReader = new FileReader();
+
+        $(document).ready(function () {
+            $('#btnUpload').click(async function () {
+                let files = $('#fileUpload').prop('files');
+
+                if (files && files.length > 0) {
+                    let file = files[0];
+
+                    fileReader.readAsBinaryString(file);
+                }
+            });
+        });
+
+        fileReader.onload = function (e) {
+            var buffer = fileReader.result;
+            let files = $('#fileUpload').prop('files');
+            let file = files[0];
+
+            $.ajax({
+                method: 'POST',
+                data: JSON.stringify({
+                    data: buffer,
+                    fileName: file.name
+                }),
+                contentType: 'application/json',
+                url: 'http://localhost:3000/uploadFile',
+                complete: (response) => {
+                    console.log(response)
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

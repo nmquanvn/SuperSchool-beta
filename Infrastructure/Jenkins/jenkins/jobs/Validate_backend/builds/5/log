@@ -1,0 +1,10 @@
+Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Validate backend
+[Validate backend] $ /bin/bash /tmp/jenkins6076537600193565738.sh
+backend_server
+backend_server
+dd012b5c92d79145adf0f1d9ed52417e5f01690bb881de6e8bf156d2950428d2
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+Finished: SUCCESS

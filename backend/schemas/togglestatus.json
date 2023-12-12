@@ -1,0 +1,15 @@
+{
+    "required": [
+        "userId",
+        "status"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "userId": {
+            "type": "number"
+        },
+        "status": {
+            "type": "boolean"
+        }
+    }
+}

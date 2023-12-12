@@ -1,0 +1,11 @@
+{
+  "required": [
+    "publish"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "publish": {
+      "type": "boolean"
+    }
+  }
+}

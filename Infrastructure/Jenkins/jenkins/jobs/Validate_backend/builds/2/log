@@ -1,0 +1,15 @@
+Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Validate backend
+[Validate backend] $ /bin/sh -xe /tmp/jenkins3318768904119228810.sh
++ docker ps -q -f name=backend_server
++ [ !  ]
++ docker ps -aq -f status=exited -f name=backend_server
++ [  ]
++ docker ps -aq -f status=exited -f name=backend_server
++ [  ]
++ docker run -p 43000:3000 -d --name backend_server backend:develop
+87e32214f5aea3bc36acb727315929c5773f5c5419c85857213d73f4611533c2
+docker: Error response from daemon: driver failed programming external connectivity on endpoint backend_server (14295b0f1cad5f5f57b40a6965a4c2d3d521db5012a647aa05a8f042c908ce4f): Bind for 0.0.0.0:43000 failed: port is already allocated.
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

@@ -1,0 +1,41 @@
+Started by user [8mha:////4PG8PLSObF1sI7QtJiaIdYy3Qasw+dRKuKvb6xvOMADIAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyWEgZu/dLi1CL9xJTczDwAZ3pnlMAAAAA=[0mrico
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Deploy backend to host
+[Deploy backend to host] $ /usr/bin/ansible-playbook /etc/ansible/playbook.yml -i /etc/ansible/inventory/production -f 5 --private-key /tmp/ssh8890663436690780428.key -u root -e version=develop
+
+PLAY [Network Getting Started First Playbook] **********************************
+
+TASK [Debug] *******************************************************************
+ok: [production] => {
+    "msg": "develop"
+}
+
+TASK [Copy pulling script] *****************************************************
+changed: [production]
+
+TASK [Pulling backend] *********************************************************
+changed: [production]
+
+TASK [Waiting for pulling] *****************************************************
+fatal: [production]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (wait_for) module: time_out Supported parameters include: active_connection_states, connect_timeout, delay, exclude_hosts, host, msg, path, port, search_regex, sleep, state, timeout"}
+
+PLAY RECAP *********************************************************************
+production                 : ok=3    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
+FATAL: command execution failed
+hudson.AbortException: Ansible playbook execution failed
+	at org.jenkinsci.plugins.ansible.AnsiblePlaybookBuilder.perform(AnsiblePlaybookBuilder.java:262)
+	at org.jenkinsci.plugins.ansible.AnsiblePlaybookBuilder.perform(AnsiblePlaybookBuilder.java:232)
+	at jenkins.tasks.SimpleBuildStep.perform(SimpleBuildStep.java:123)
+	at hudson.tasks.BuildStepCompatibilityLayer.perform(BuildStepCompatibilityLayer.java:80)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:803)
+	at hudson.model.Build$BuildExecution.build(Build.java:197)
+	at hudson.model.Build$BuildExecution.doRun(Build.java:163)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:513)
+	at hudson.model.Run.execute(Run.java:1907)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:429)
+ERROR: Ansible playbook execution failed
+Finished: FAILURE

@@ -1,0 +1,31 @@
+{
+    "required": [
+        "courseId",
+        "videos"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "courseId": {
+            "type": "number"
+        },
+        "videos": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "type": "string"
+                    },
+                    "fileName": {
+                        "type": "string"
+                    },
+                    "orderNo": {
+                        "type": "number"
+                    }
+                },
+                "required": ["data", "fileName", "orderNo"],
+                "additionalProperties": true
+            }
+        }
+    }
+}
